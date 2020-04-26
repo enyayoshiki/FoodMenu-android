@@ -2,4 +2,5 @@
     <string name="app_name">FoodMenu</string>
     <string name="name_hint">料理名</string>
     <string name="selectimage_text">画像選択</string>
+    <string name="save_text">保存</string>
 </resources>

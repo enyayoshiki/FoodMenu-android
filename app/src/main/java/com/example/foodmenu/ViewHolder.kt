@@ -11,12 +11,7 @@ import kotlinx.android.synthetic.main.one_result.view.*
 
 class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
 
-    var foodname: TextView? = null
-    var foodimage: ImageView? = null
-    init{
-
-        foodname = itemView.resultName
-        foodimage = itemView.resultImage
-    }
+        var foodName = itemView.resultName
+        var foodImage = itemView.resultImage
 
 }

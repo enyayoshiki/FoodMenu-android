@@ -5,9 +5,9 @@ import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import java.util.*
 
-class FoodMenu : RealmObject() {
+open class FoodMenu : RealmObject() {
     @PrimaryKey
     var id: Long = 0
-    var name : Long = 0L
-    var image: ByteArray? = null
+    var name : String = ""
+    var image: String = ""
 }
