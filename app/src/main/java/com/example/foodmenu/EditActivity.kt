@@ -31,14 +31,14 @@ class EditActivity : AppCompatActivity() {
 
         saveBtn.setOnClickListener {
             foodName = nameEdit.text.toString()
-            foodImage = selectPhoto().toString()
+            //foodImage = selectPhoto().toString()
 
             realm.executeTransaction{
                 val maxId = realm.where<FoodMenu>().max("id")
                 val nextId = (maxId?.toLong() ?: 0L) + 1L
                 val foodMenu = realm.createObject<FoodMenu>(nextId)
                 foodMenu.name = foodName
-                foodMenu.image = foodImage
+                //foodMenu.image = foodImage
             }
             Toast.makeText(applicationContext,"保存しました",Toast.LENGTH_SHORT).show()
         }
@@ -64,7 +64,7 @@ class EditActivity : AppCompatActivity() {
                 try {
                     resultData?.data?.also {
                         Picasso.get().load(it).into(imageEdit)
-                        foodImage = resultData?.data.toString()
+                       // foodImage = resultData?.data.toString()
                     }
                 } catch (e: Exception) {
                     Toast.makeText(this, "エラーが発生しました", Toast.LENGTH_LONG).show()
