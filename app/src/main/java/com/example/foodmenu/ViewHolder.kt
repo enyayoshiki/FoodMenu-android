@@ -10,8 +10,7 @@ import io.realm.Realm
 import kotlinx.android.synthetic.main.one_result.view.*
 
 class ViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
-
-        var foodName = itemView.resultName
-       // var foodImage = itemView.resultImage
+                var foodName = itemView.resultName
+                // var foodImage = itemView.resultImage
 
 }
