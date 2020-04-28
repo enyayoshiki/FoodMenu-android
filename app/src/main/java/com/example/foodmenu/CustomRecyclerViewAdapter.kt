@@ -25,6 +25,6 @@ class CustomRecyclerViewAdapter(realmResults: RealmResults<FoodMenu>): RecyclerV
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val foodMenu = rResults[position]
        holder.foodName?.text = foodMenu?.name
-          //Picasso.get().load(Uri.parse(foodMenu?.image)).into(holder.foodImage)
+          Picasso.get().load(Uri.parse(foodMenu?.image)).into(holder.foodImage)
         }
     }

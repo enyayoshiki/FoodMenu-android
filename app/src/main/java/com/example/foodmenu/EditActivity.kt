@@ -17,8 +17,9 @@ import kotlinx.android.synthetic.main.activity_edit.*
 
 class EditActivity : AppCompatActivity() {
     private lateinit var realm: Realm
-    var foodName = ""
-    var foodImage = ""
+     var foodName = ""
+     var foodImage : String? = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,16 +30,15 @@ class EditActivity : AppCompatActivity() {
             selectPhoto()
         }
 
-        saveBtn.setOnClickListener {
+        saveBtn.setOnClickListener{
             foodName = nameEdit.text.toString()
-            //foodImage = selectPhoto().toString()
 
             realm.executeTransaction{
                 val maxId = realm.where<FoodMenu>().max("id")
                 val nextId = (maxId?.toLong() ?: 0L) + 1L
                 val foodMenu = realm.createObject<FoodMenu>(nextId)
                 foodMenu.name = foodName
-                //foodMenu.image = foodImage
+                foodMenu.image = foodImage
             }
             Toast.makeText(applicationContext,"保存しました",Toast.LENGTH_SHORT).show()
         }
@@ -56,6 +56,7 @@ class EditActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
         super.onActivityResult(requestCode, resultCode, resultData)
 
+
         if (resultCode != RESULT_OK) {
             return
         }
@@ -64,7 +65,7 @@ class EditActivity : AppCompatActivity() {
                 try {
                     resultData?.data?.also {
                         Picasso.get().load(it).into(imageEdit)
-                       // foodImage = resultData?.data.toString()
+                        foodImage = resultData?.data?.toString()
                     }
                 } catch (e: Exception) {
                     Toast.makeText(this, "エラーが発生しました", Toast.LENGTH_LONG).show()
