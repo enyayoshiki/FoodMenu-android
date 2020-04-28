@@ -10,12 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+
     <Button
         android:id="@+id/startEditBtn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@android:drawable/ic_input_add"
+        android:background="@drawable/custom_button"
+        android:foreground="@android:drawable/ic_input_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-    </Button>
+        app:layout_constraintRight_toRightOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,8 @@
     <string name="selectimage_text">画像選択</string>
     <string name="save_text">保存</string>
     <string name="delete_text">削除</string>
+    <string name="difficult_hint">難易度</string>
+    <string name="timecost_hint">所要時間</string>
+    <string name="foodresource_hint">必要食材</string>
+    <string name="cookmethod_hint">調理工程</string>
 </resources>

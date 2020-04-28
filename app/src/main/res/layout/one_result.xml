@@ -6,22 +6,48 @@
 
     <ImageView
         android:id="@+id/resultImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="186dp"
+        android:layout_height="162dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/resultName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/resultImage"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@drawable/flame_style"
         android:layout_marginLeft="30dp"
+        app:layout_constraintLeft_toRightOf="@id/resultImage"
         app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/resultDifficult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/resultName"
+        app:layout_constraintTop_toBottomOf="@id/resultName"
+        android:layout_marginTop="30dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         />
+    <TextView
+        android:id="@+id/resultTimeCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/resultName"
+        app:layout_constraintTop_toBottomOf="@id/resultDifficult"
+        android:layout_marginTop="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
