@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="170dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/resultImage"
-        android:layout_width="186dp"
-        android:layout_height="162dp"
+        android:layout_width="139dp"
+        android:layout_height="145dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
     <TextView
@@ -19,7 +24,9 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:background="@drawable/flame_style"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
         app:layout_constraintLeft_toRightOf="@id/resultImage"
         app:layout_constraintTop_toTopOf="parent"
         />
@@ -28,19 +35,24 @@
         android:id="@+id/resultDifficult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@drawable/flame_style"
         app:layout_constraintLeft_toLeftOf="@id/resultName"
         app:layout_constraintTop_toBottomOf="@id/resultName"
-        android:layout_marginTop="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         />
+
     <TextView
         android:id="@+id/resultTimeCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@drawable/flame_style"
         app:layout_constraintLeft_toLeftOf="@id/resultName"
         app:layout_constraintTop_toBottomOf="@id/resultDifficult"
-        android:layout_marginTop="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         />
 
     <View

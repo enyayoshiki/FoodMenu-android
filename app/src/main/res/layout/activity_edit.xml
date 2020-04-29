@@ -7,54 +7,71 @@
     tools:context=".EditActivity">
 
     <EditText
-        android:background="@drawable/flame_style"
         android:id="@+id/nameEdit"
-        android:layout_width="203dp"
-        android:layout_height="48dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="20dp"
+        android:padding="3dp"
         android:hint="@string/name_hint"
         android:gravity="center"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:inputType="text"
+        android:background="@drawable/flame_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
 
-    <EditText
+    <TextView
+        android:id="@+id/textD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="192dp"
+        android:text="@string/textD_text"
+        android:textSize="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/difficultEdit" />
+
+    <Spinner
         android:id="@+id/difficultEdit"
-        android:layout_width="203dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="90dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="68dp"
+        android:padding="3dp"
         android:background="@drawable/flame_style"
-        android:gravity="center"
-        android:hint="@string/difficult_hint"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+
+    <TextView
+        android:id="@+id/textT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="184dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/textT_text"
+        android:textSize="17dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/timecostEdit" />
+
+    <Spinner
         android:id="@+id/timecostEdit"
-        android:layout_width="203dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="116dp"
+        android:padding="3dp"
         android:background="@drawable/flame_style"
-        android:gravity="center"
-        android:hint="@string/difficult_hint"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/foodsourceEdit"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:background="@drawable/flame_style"
         android:hint="@string/foodresource_hint"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:gravity="center"
         android:layout_marginBottom="50dp"
         android:inputType="text"
@@ -67,12 +84,11 @@
     <EditText
         android:id="@+id/cookmethodEdit"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="150dp"
         android:background="@drawable/flame_style"
         android:gravity="center"
         android:hint="@string/cookmethod_hint"
         android:inputType="text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@id/saveBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,26 +96,28 @@
 
     <ImageView
         android:id="@+id/imageEdit"
-        android:layout_width="180dp"
-        android:layout_height="172dp"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         android:background="@drawable/flame_style"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
     <Button
         android:id="@+id/selectImageBtn"
-        android:layout_width="180dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
         android:text="@string/selectimage_text"
         app:layout_constraintLeft_toLeftOf="@id/imageEdit"
         app:layout_constraintTop_toBottomOf="@id/imageEdit" />
 
     <Button
         android:id="@+id/deleteBtn"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="42dp"
         android:text="@string/delete_text"
         app:layout_constraintRight_toRightOf="parent"
@@ -109,7 +127,7 @@
 
     <Button
         android:id="@+id/saveBtn"
-        android:layout_width="170dp"
+        android:layout_width="150dp"
         android:layout_height="42dp"
         android:layout_marginBottom="10dp"
         android:text="@string/save_text"

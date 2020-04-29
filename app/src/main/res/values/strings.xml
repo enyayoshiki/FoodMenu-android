@@ -8,4 +8,6 @@
     <string name="timecost_hint">所要時間</string>
     <string name="foodresource_hint">必要食材</string>
     <string name="cookmethod_hint">調理工程</string>
+    <string name="textD_text">難易度:</string>
+    <string name="textT_text">所要時間:</string>
 </resources>
