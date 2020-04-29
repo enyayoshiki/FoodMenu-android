@@ -1,5 +1,6 @@
 package com.example.foodmenu
 
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,7 +14,7 @@ class CustomRecyclerViewAdapter(realmResults: RealmResults<FoodMenu>): RecyclerV
     private val rResults: RealmResults<FoodMenu> = realmResults
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.one_result,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.one_result, parent, false)
         val viewHolder = ViewHolder(view)
         return viewHolder
     }
@@ -28,5 +29,11 @@ class CustomRecyclerViewAdapter(realmResults: RealmResults<FoodMenu>): RecyclerV
         holder.foodDifficult?.text = foodMenu?.difficult
         holder.foodTimeCost?.text = foodMenu?.timecost
         Picasso.get().load(Uri.parse(foodMenu?.image)).into(holder.foodImage)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(it.context, EditActivity::class.java)
+            intent.putExtra("id", foodMenu?.id)
+            it.context.startActivity(intent)
         }
     }
+}

@@ -12,4 +12,8 @@ open class FoodMenu : RealmObject() {
     var image: String? = ""
     var difficult :String = ""
     var timecost :String = ""
+    var numTextD = 0
+    var numTextT = 0
+    var resource = ""
+    var method = ""
 }
